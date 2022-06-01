@@ -46,7 +46,7 @@ app.post("/payment", urlencodedParser, function (req, res) {
         unit_price: parseFloat(req.body.price),
         picture_url: new URL(
           req.body.img,
-          "http://localhost:3000/"
+          "https://mp-ecommerce-node-matias.herokuapp.com/"
         ).href,
         quantity: parseInt(req.body.unit),
       },
@@ -67,13 +67,13 @@ app.post("/payment", urlencodedParser, function (req, res) {
       },
     },
     back_urls: {
-      success: "http://localhost:3000/success",
-      failure: "http://localhost:3000/failure",
-      pending: "http://localhost:3000/pending",
+      success: "https://mp-ecommerce-node-matias.herokuapp.com/success",
+      failure: "https://mp-ecommerce-node-matias.herokuapp.com/failure",
+      pending: "https://mp-ecommerce-node-matias.herokuapp.com/pending",
     },
     auto_return: "approved",
     notification_url:
-      "http://localhost:3000/notifications?source_news=webhooks",
+      "https://mp-ecommerce-node-matias.herokuapp.com/notifications?source_news=webhooks",
     payment_methods: {
       excluded_payment_methods: [
         {
